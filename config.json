@@ -1,0 +1,13 @@
+{
+    "num_nodes": 100000,
+    "use_edge_bias": false,
+    "propagation_rounds": 2,
+    "propagation_substeps": 20,
+    "graph_rnn_cell": "gru",
+    "graph_rnn_activation": "relu",
+    "graph_state_dropout_keep_prob": 0.9,
+    "hidden_size": 64,
+    "learning_rate": 0.001,
+    "batch_size": 32,
+    "num_epochs": 100
+} 
