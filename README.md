@@ -43,6 +43,7 @@ pip install docopt
 
 对于每个数据集，我们随机选择 80% 的合约作为训练集，剩余的 20% 作为测试集。
 评估指标包括准确率（Accuracy）、召回率（Recall）、精确率（Precision）和 F1 分数（F1 Score）。
+您可以通过运行代码之后所生成的图表，可视化这些数据项，以便您接下来的分析与研究。
 我们目前实验复现了重入（Reentrancy）和时间戳依赖（Timestamp Dependence）漏洞检测。
 
 ### 数据集获取
