@@ -1,4 +1,4 @@
-# GNNSCVulDetector ![GitHub stars](https://img.shields.io/github/stars/Messi-Q/GNNSCVulDetector.svg?style=plastic) ![GitHub forks](https://img.shields.io/github/forks/Messi-Q/GNNSCVulDetector.svg?color=blue&style=plastic)
+# GNNSCVHunter
 
 本项目是使用图神经网络（GNN）进行智能合约漏洞检测的 Python 实现。
 
