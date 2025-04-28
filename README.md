@@ -4,9 +4,10 @@
 
 ## 引用
 
-如果在您的论文中引用了我们的[论文](https://www.ijcai.org/Proceedings/2020/0454.pdf)或代码，请使用以下引用格式：
+我们参考了[论文](https://www.ijcai.org/Proceedings/2020/0454.pdf)以及部分实现代码：
 
 ```
+原作者信息：
 @inproceedings{zhuang2020smart,
   title={Smart Contract Vulnerability Detection using Graph Neural Network.},
   author={Zhuang, Yuan and Liu, Zhenguang and Qian, Peng and Liu, Qi and Wang, Xiang and He, Qinming},
@@ -20,7 +21,7 @@
 
 ### 必需的库
 
-*   **Python** 3+
+*   **Python** 3.6
 *   **TensorFlow** 1.14.0 (不支持 tf2.0)
 *   **Keras** 2.2.4 (使用 TensorFlow 后端)
 *   **scikit-learn** 0.20.2
@@ -42,9 +43,7 @@ pip install docopt
 
 对于每个数据集，我们随机选择 80% 的合约作为训练集，剩余的 20% 作为测试集。
 评估指标包括准确率（Accuracy）、召回率（Recall）、精确率（Precision）和 F1 分数（F1 Score）。
-考虑到不同平台的特性：
-*   重入（Reentrancy）和时间戳依赖（Timestamp Dependence）漏洞的实验在 ESC（以太坊智能合约）数据集上进行。
-*   无限循环（Infinite Loop）漏洞的实验在 VSC（Vntchain 智能合约）数据集上进行。
+我们目前实验复现了重入（Reentrancy）和时间戳依赖（Timestamp Dependence）漏洞检测。
 
 ### 数据集获取
 
@@ -153,8 +152,6 @@ python GNNSCModel.py --random_seed 9930 --thresholds 0.45 --data_dir .
 ## 注意事项
 
 *   数据处理相关的代码已包含在项目中。
-*   如有任何问题，请发送邮件至 messi.qp711@gmail.com。
-*   本项目代码改编自 [Microsoft/gated-graph-neural-network-samples](https://github.com/Microsoft/gated-graph-neural-network-samples)。
 
 ## 相关文献参考
 
