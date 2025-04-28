@@ -158,5 +158,3 @@ python GNNSCModel.py --random_seed 9930 --thresholds 0.45 --data_dir .
 1.  Li Y, Tarlow D, Brockschmidt M, et al. Gated graph sequence neural networks. ICLR, 2016. ([GGNN 论文](https://arxiv.org/abs/1511.05493))
 2.  Qian P, Liu Z, He Q, et al. Towards automated reentrancy detection for smart contracts based on sequential models. 2020. ([ReChecker 项目](https://github.com/Messi-Q/ReChecker))
 ```
-
-        
