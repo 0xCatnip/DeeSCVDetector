@@ -80,7 +80,7 @@ ${GNNSCVulDetector}
 *   `data/<vulnerability_type>/graph_data`: 存放由 `AutoExtractGraph.py` 提取的智能合约图结构数据（包括节点和边）。
 *   `train_data/<vulnerability_type>/train.json`: 对应漏洞类型的训练数据。
 *   `train_data/<vulnerability_type>/valid.json`: 对应漏洞类型的验证（测试）数据。
-*   `features/reentrancy`: (根据原 README 推断) 存放模型提取的重入漏洞特征。
+*   `features/reentrancy`: 存放模型提取的重入漏洞特征。
 
 ## 代码文件说明
 
@@ -89,12 +89,12 @@ ${GNNSCVulDetector}
 ```
 ${GNNSCVulDetector}
 ├── tools
-│   ├── remove_comment.py       # (推测) 用于移除代码注释
-│   ├── construct_fragment.py   # (推测) 用于构建代码片段
+│   ├── remove_comment.py       # 用于移除代码注释
+│   ├── construct_fragment.py   # 用于构建代码片段
 │   ├── reentrancy              # 重入漏洞相关工具
 │   │   ├── AutoExtractGraph.py # 提取合约图结构
 │   │   └── graph2vec.py        # 将图转换为向量表示
-│   └── timestamp               # (推测) 时间戳依赖漏洞相关工具 (结构类似reentrancy)
+│   └── timestamp               # 时间戳依赖漏洞相关工具 (结构类似reentrancy)
 │       ├── AutoExtractGraph.py
 │       └── graph2vec.py
 ├── BasicModel.py               # 模型基类
@@ -113,8 +113,6 @@ ${GNNSCVulDetector}
         cd tools/reentrancy
         python AutoExtractGraph.py
         ```
-        *注意：原 README 中的 `python3` 可能需要根据你的 Python 环境调整为 `python`。*
-
 2.  **`tools/<vulnerability_type>/graph2vec.py`**
     *   进行特征消融实验。
     *   将合约图转换为向量表示。
@@ -148,7 +146,6 @@ python GNNSCModel.py [options]
 ```shell
 python GNNSCModel.py --random_seed 9930 --thresholds 0.45 --data_dir .
 ```
-*注意：原 README 中的 `python3` 可能需要根据你的 Python 环境调整为 `python`。默认情况下，模型会使用 `train_data/timestamp/` 下的数据，如需更改，请修改 <mcfile name="BasicModel.py" path="e:\Alex\GNNSCVHunter\GNNSCVulDetector-master\BasicModel.py"></mcfile> 中的 `train_file` 和 `valid_file` 参数或使用配置文件指定。*
 
 ## 注意事项
 
